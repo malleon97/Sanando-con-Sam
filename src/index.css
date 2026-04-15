@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Georgia", serif;
+
+  --color-primary: #C9A8E8;
+  --color-primary-dark: #7B4FA6;
+  --color-secondary-soft: #E8D8F5;
+  --color-accent-cta: #9B59D6;
+  --color-support-warm: #F9F4FF;
+  --color-text-main: #2D1B4E;
+  --color-text-secondary: #6B5B8A;
+
+  --shadow-lila: 0 4px 20px rgba(201, 168, 232, 0.25);
+}
+
+@layer base {
+  body {
+    @apply font-sans text-text-main bg-white antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+  .animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Theme specific patterns */
+  .hero-gradient {
+    background: linear-gradient(135deg, #F9F4FF 0%, #E8D8F5 100%);
+  }
+}
