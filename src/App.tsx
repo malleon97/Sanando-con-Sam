@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  Menu, X, Check, Star, Apple, Dumbbell, Heart, 
+import WhatsAppButton from '@/Whatsapp';
+import {
+  Menu, X, Check, Star, Apple, Dumbbell, Heart,
   ChevronDown, ChevronUp, Instagram, Youtube, Send, MessageCircle,
   ArrowRight, Users, Sparkles
 } from 'lucide-react';
@@ -22,15 +23,15 @@ const SectionTitle = ({ title, subtitle, light = false }: { title: string, subti
   </div>
 );
 
-const Button = ({ 
-  children, 
-  variant = 'primary', 
-  className = '', 
+const Button = ({
+  children,
+  variant = 'primary',
+  className = '',
   onClick,
   href
-}: { 
-  children: React.ReactNode, 
-  variant?: 'primary' | 'secondary' | 'white', 
+}: {
+  children: React.ReactNode,
+  variant?: 'primary' | 'secondary' | 'white',
   className?: string,
   onClick?: () => void,
   href?: string
@@ -143,7 +144,7 @@ export default function App() {
         {/* Mobile Menu */}
         <AnimatePresence>
           {isMenuOpen && (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
@@ -165,7 +166,7 @@ export default function App() {
       {/* [2] HERO SECTION */}
       <section id="inicio" className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden hero-gradient">
         <div className="container mx-auto px-10 grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] items-center gap-12">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -181,7 +182,7 @@ export default function App() {
               <Button variant="primary" href="#contacto">Empieza tu transformación</Button>
               <Button variant="secondary" href="#servicios">Conoce mis programas</Button>
             </div>
-            
+
             <div className="mt-12 flex flex-wrap justify-center md:justify-start gap-6">
               <div className="flex items-center gap-2 text-text-secondary font-semibold text-xs uppercase tracking-wider">
                 <span className="text-primary-dark text-lg">✓</span>
@@ -198,7 +199,7 @@ export default function App() {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
@@ -226,12 +227,12 @@ export default function App() {
             <div className="relative">
               <div className="w-full aspect-square rounded-full border-4 border-primary p-4">
                 <div className="w-full h-full rounded-full bg-support-warm flex items-center justify-center overflow-hidden">
-                   <div className="text-6xl font-display font-bold text-primary">SAM</div>
+                  <div className="text-6xl font-display font-bold text-primary">SAM</div>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <div className="flex-1">
             <h2 className="text-4xl font-bold mb-6">Hola, soy Sam</h2>
             <div className="space-y-4 text-lg text-text-secondary mb-8 leading-relaxed">
@@ -242,7 +243,7 @@ export default function App() {
                 Tras años de formación y experiencia, decidí crear <strong>Sanando con Sam</strong> para acompañar a personas como tú a romper con el ciclo de dietas restrictivas y entrenamientos aburridos.
               </p>
             </div>
-            
+
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {[
                 "Graduada en Ciencias del Deporte",
@@ -269,14 +270,14 @@ export default function App() {
       {/* [4] SERVICIOS */}
       <section id="servicios" className="py-20 bg-white">
         <div className="container mx-auto px-10">
-          <SectionTitle 
-            title="Programas a tu medida" 
+          <SectionTitle
+            title="Programas a tu medida"
             subtitle="Elige el camino que mejor se adapte a tus objetivos actuales. Todos mis planes son 100% personalizados."
           />
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Tarjeta 1 */}
-            <motion.div 
+            <motion.div
               whileHover={{ y: -5 }}
               className="bg-white p-8 rounded-2xl shadow-md border-t-4 border-primary flex flex-col"
             >
@@ -297,7 +298,7 @@ export default function App() {
             </motion.div>
 
             {/* Tarjeta 2 - DESTACADA */}
-            <motion.div 
+            <motion.div
               whileHover={{ y: -15 }}
               className="bg-support-warm p-8 rounded-2xl shadow-lila border-t-6 border-accent-cta flex flex-col relative transform -translate-y-2"
             >
@@ -321,7 +322,7 @@ export default function App() {
             </motion.div>
 
             {/* Tarjeta 3 */}
-            <motion.div 
+            <motion.div
               whileHover={{ y: -5 }}
               className="bg-white p-8 rounded-2xl shadow-md border-t-4 border-primary flex flex-col"
             >
@@ -348,11 +349,11 @@ export default function App() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <SectionTitle title="Tu camino hacia el cambio" subtitle="Un proceso sencillo y acompañado para que nunca te sientas sola." />
-          
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
             {/* Connector Line (Desktop) */}
             <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-primary/20 -z-10"></div>
-            
+
             {[
               { step: "01", title: "Consulta gratuita", desc: "Hablamos de tus objetivos, miedos y situación actual sin compromiso." },
               { step: "02", title: "Diseño de tu plan", desc: "Creo un programa 100% adaptado a tu ritmo de vida y preferencias." },
@@ -375,7 +376,7 @@ export default function App() {
       <section id="resultados" className="py-20 bg-secondary-soft/30">
         <div className="container mx-auto px-4">
           <SectionTitle title="Historias que inspiran" subtitle="Ellas ya han dado el paso. Mira lo que han conseguido con el método de Sam." />
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { name: "Lucía García", result: "Bajé 8 kg en 3 meses", text: "Sam me enseñó que no hace falta sufrir para ver resultados. He recuperado mi energía y por fin me gusta lo que veo en el espejo.", color: "bg-primary" },
@@ -409,7 +410,7 @@ export default function App() {
             {/* Decorative SVGs */}
             <div className="absolute top-0 left-0 w-32 h-32 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
             <div className="absolute bottom-0 right-0 w-48 h-48 bg-white/10 rounded-full translate-x-1/4 translate-y-1/4"></div>
-            
+
             <div className="relative z-10">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">¿Lista para empezar?</h2>
               <p className="text-xl md:text-2xl mb-10 max-w-2xl mx-auto opacity-90">
@@ -430,11 +431,11 @@ export default function App() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-3xl">
           <SectionTitle title="Dudas frecuentes" />
-          
+
           <div className="space-y-4">
             {faqs.map((faq, i) => (
               <div key={i} className="border border-primary/20 rounded-2xl overflow-hidden">
-                <button 
+                <button
                   className="w-full p-6 text-left flex justify-between items-center bg-white hover:bg-support-warm transition-colors"
                   onClick={() => setActiveFaq(activeFaq === i ? null : i)}
                 >
@@ -443,7 +444,7 @@ export default function App() {
                 </button>
                 <AnimatePresence>
                   {activeFaq === i && (
-                    <motion.div 
+                    <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
@@ -485,10 +486,10 @@ export default function App() {
                 </div>
               </div>
             </div>
-            
+
             <div className="md:w-2/3 p-12">
               {formStatus === 'success' ? (
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   className="h-full flex flex-col items-center justify-center text-center py-12"
@@ -523,7 +524,7 @@ export default function App() {
                     </div>
                     <div>
                       <label className="block text-sm font-bold text-text-main mb-2">¿Cuál es tu objetivo?</label>
-                      <select 
+                      <select
                         value={selectedObjective}
                         onChange={(e) => setSelectedObjective(e.target.value)}
                         className="w-full px-4 py-3 rounded-xl border border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white"
@@ -560,13 +561,13 @@ export default function App() {
           <p className="text-white/70 max-w-md mx-auto mb-10 text-lg italic">
             "Tu salud es el proyecto más importante de tu vida. Empecemos a cuidarlo juntas."
           </p>
-          
+
           <div className="flex justify-center gap-8 mb-12">
             <a href="#" className="hover:text-primary transition-colors"><Instagram size={28} /></a>
             <a href="#" className="hover:text-primary transition-colors"><Youtube size={28} /></a>
             <a href="#" className="hover:text-primary transition-colors"><MessageCircle size={28} /></a>
           </div>
-          
+
           <div className="flex flex-wrap justify-center gap-6 text-sm mb-12 opacity-80">
             <a href="#inicio" className="hover:text-primary">Inicio</a>
             <a href="#sobre-mi" className="hover:text-primary">Sobre Mí</a>
@@ -574,7 +575,7 @@ export default function App() {
             <a href="#resultados" className="hover:text-primary">Resultados</a>
             <a href="#contacto" className="hover:text-primary">Contacto</a>
           </div>
-          
+
           <div className="pt-8 border-t border-white/10 text-sm opacity-60">
             © 2025 Sanando con Sam · Política de Privacidad · Aviso Legal
           </div>
@@ -582,17 +583,8 @@ export default function App() {
       </footer>
 
       {/* [11] BOTÓN FLOTANTE WHATSAPP */}
-      <a 
-        href="https://wa.me/34600000000" 
-        target="_blank" 
-        rel="noreferrer"
-        className="fixed bottom-8 right-8 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-40 group"
-      >
-        <MessageCircle size={32} fill="white" />
-        <div className="absolute right-20 bg-white text-text-main px-4 py-2 rounded-lg shadow-md font-bold text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-          ¡Escríbeme!
-        </div>
-      </a>
+      <WhatsAppButton phone="34612345678" message="Hola, me interesa tu asesoramiento deportivo"
+      />
     </div>
   );
 }
