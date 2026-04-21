@@ -292,8 +292,9 @@ export default function App() {
                 <li>• Plan flexible</li>
               </ul>
               <div className="mt-auto">
-                <div className="text-2xl font-bold text-text-main mb-4">89€/mes</div>
-                <Button variant="primary" className="w-full py-2 text-xs" onClick={() => handleSelectProgram('Entrenamiento Personal Online')}>Quiero este plan</Button>
+                <a href="form.typeform.com/to/PGgHEwa7" target="_blank" rel="noopener noreferrer">
+                  <Button variant="primary" className="w-full py-2 text-xs" onClick={() => handleSelectProgram('Entrenamiento Personal Online')}>Quiero este plan</Button>
+                </a>
               </div>
             </motion.div>
 
@@ -314,10 +315,9 @@ export default function App() {
                 <li>• Comunidad privada</li>
               </ul>
               <div className="mt-auto">
-                <div className="text-2xl font-bold text-text-main mb-4">
-                  139€ <span className="text-xs text-text-secondary line-through opacity-50 ml-2">180€</span>
-                </div>
-                <Button variant="primary" className="w-full py-2 text-xs" onClick={() => handleSelectProgram('Programa Salud Activa Total')}>¡Lo quiero todo!</Button>
+                <a href="form.typeform.com/to/PGgHEwa7" target="_blank" rel="noopener noreferrer">
+                  <Button variant="primary" className="w-full py-2 text-xs" onClick={() => handleSelectProgram('Programa Salud Activa Total')}>¡Lo quiero todo!</Button>
+                </a>
               </div>
             </motion.div>
 
@@ -337,8 +337,9 @@ export default function App() {
                 <li>• Análisis de hábitos</li>
               </ul>
               <div className="mt-auto">
-                <div className="text-2xl font-bold text-text-main mb-4">69€/mes</div>
-                <Button variant="primary" className="w-full py-2 text-xs" onClick={() => handleSelectProgram('Plan Nutricional Personalizado')}>Quiero este plan</Button>
+                <a href="form.typeform.com/to/PGgHEwa7" target="_blank" rel="noopener noreferrer">
+                  <Button variant="primary" className="w-full py-2 text-xs" onClick={() => handleSelectProgram('Plan Nutricional Personalizado')}>Quiero este plan</Button>
+                </a>
               </div>
             </motion.div>
           </div>
@@ -563,9 +564,8 @@ export default function App() {
           </p>
 
           <div className="flex justify-center gap-8 mb-12">
-            <a href="#" className="hover:text-primary transition-colors"><Instagram size={28} /></a>
-            <a href="#" className="hover:text-primary transition-colors"><Youtube size={28} /></a>
-            <a href="#" className="hover:text-primary transition-colors"><MessageCircle size={28} /></a>
+            <a href="https://www.instagram.com/sanandoconsam/" className="hover:text-primary transition-colors"><Instagram size={28} /></a>
+            <a href="https://www.youtube.com/" className="hover:text-primary transition-colors"><Youtube size={28} /></a>
           </div>
 
           <div className="flex flex-wrap justify-center gap-6 text-sm mb-12 opacity-80">
