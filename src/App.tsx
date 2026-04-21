@@ -292,7 +292,7 @@ export default function App() {
                 <li>• Plan flexible</li>
               </ul>
               <div className="mt-auto">
-                <a href="form.typeform.com/to/PGgHEwa7" target="_blank" rel="noopener noreferrer">
+                <a href="https://form.typeform.com/to/PGgHEwa7" target="_blank" rel="noopener noreferrer">
                   <Button variant="primary" className="w-full py-2 text-xs" onClick={() => handleSelectProgram('Entrenamiento Personal Online')}>Quiero este plan</Button>
                 </a>
               </div>
@@ -315,7 +315,7 @@ export default function App() {
                 <li>• Comunidad privada</li>
               </ul>
               <div className="mt-auto">
-                <a href="form.typeform.com/to/PGgHEwa7" target="_blank" rel="noopener noreferrer">
+                <a href="https://form.typeform.com/to/PGgHEwa7" target="_blank" rel="noopener noreferrer">
                   <Button variant="primary" className="w-full py-2 text-xs" onClick={() => handleSelectProgram('Programa Salud Activa Total')}>¡Lo quiero todo!</Button>
                 </a>
               </div>
@@ -337,7 +337,7 @@ export default function App() {
                 <li>• Análisis de hábitos</li>
               </ul>
               <div className="mt-auto">
-                <a href="form.typeform.com/to/PGgHEwa7" target="_blank" rel="noopener noreferrer">
+                <a href="https://form.typeform.com/to/PGgHEwa7" target="_blank" rel="noopener noreferrer">
                   <Button variant="primary" className="w-full py-2 text-xs" onClick={() => handleSelectProgram('Plan Nutricional Personalizado')}>Quiero este plan</Button>
                 </a>
               </div>
