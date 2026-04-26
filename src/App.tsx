@@ -207,7 +207,7 @@ export default function App() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="relative flex justify-center"
+            className="relative flex justify-center pb-20 md:pb-0"
           >
             <div className="w-72 h-72 md:w-[320px] md:h-[320px] rounded-full bg-gradient-to-b from-primary to-accent-cta p-2 shadow-lila border-8 border-white">
               <div className="w-full h-full rounded-full flex items-center justify-center overflow-hidden">
@@ -218,7 +218,7 @@ export default function App() {
                 />
               </div>
             </div>
-            <div className="absolute bottom-5 -right-5 md:-right-10 bg-white p-5 rounded-xl shadow-lila max-w-[220px] border-l-4 border-primary">
+            <div className="absolute bottom-10 -right-5 md:-right-10 bg-white p-5 rounded-xl shadow-lila max-w-[220px] border-l-4 border-primary">
               <strong className="block text-sm mb-1">Hola, soy Sam</strong>
               <p className="text-xs leading-relaxed text-text-secondary">
                 Te ayudo a sanar tu relación con la comida y tu cuerpo desde la fuerza, autoestima y el amor propio.
