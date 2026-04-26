@@ -91,27 +91,27 @@ export default function App() {
   const faqs = [
     {
       q: "¿Necesito tener experiencia previa para empezar?",
-      a: "¡Para nada! Mis programas están diseñados para todos los niveles. Si eres principiante, empezaremos desde las bases para que te sientas segura y cómoda en cada paso."
+      a: "No necesitas nada previo. Solo las ganas de empezar a sanar. Cada programa se adapta completamente a tu punto de partida."
     },
     {
-      q: "¿Cómo funcionan las sesiones de entrenamiento online?",
-      a: "Recibirás tu planificación personalizada a través de mi plataforma. Tendrás vídeos explicativos de cada ejercicio, seguimiento de tus progresos y contacto directo conmigo por WhatsApp para resolver dudas en tiempo real."
+      q: "¿Cómo funcionan las sesiones individuales online?",
+      a: "Las sesiones son por videollamada, en un espacio seguro y confidencial. Tú eliges el horario que mejor se adapta a tu día a día."
     },
     {
       q: "¿Los planes nutricionales son dietas restrictivas?",
-      a: "Rotundamente no. Mi enfoque es la nutrición consciente. Aprenderás a comer de todo, disfrutando de la comida y adaptando los menús a tus gustos y estilo de vida, sin pasar hambre ni prohibiciones absurdas."
+      a: "Para nada. Mi enfoque está en construir una relación sana con la comida, no en ponerle más reglas. Nada de prohibiciones, nada de contar calorías."
     },
     {
-      q: "¿Qué pasa si no veo resultados?",
-      a: "El compromiso es mutuo. Si sigues el plan y no hay cambios, revisaremos la estrategia juntas. Mi objetivo es tu éxito, y ajustaremos lo que sea necesario para que alcances tus metas de forma saludable."
+      q: "¿Qué pasa si siento que no avanzo?",
+      a: "Revisamos juntas, sin juicio. El proceso de sanación no es lineal y lo sé mejor que nadie. Estoy aquí para acompañarte en cada etapa."
     },
     {
-      q: "¿Puedo compaginar el programa con mi trabajo y familia?",
-      a: "Esa es la clave de mi método. No tú te adaptas al plan, el plan se adapta a ti. Diseñaremos rutinas que encajen en tu agenda real, por muy apretada que sea."
+      q: "¿Puedo compaginarlo con mi trabajo y mi vida diaria?",
+      a: "Sí. Todo está diseñado para adaptarse a tu ritmo real, no al revés."
     },
     {
       q: "¿Cómo me pongo en contacto con Sam fuera de las sesiones?",
-      a: "Tendrás acceso a mi WhatsApp personal para cualquier duda urgente o motivación extra que necesites. Estoy aquí para acompañarte en todo el proceso."
+      a: "Todos los programas incluyen seguimiento por whatsapp y acceso a la comunidad, para que nunca te sientas sola entre sesión y sesión."
     }
   ];
 
@@ -176,21 +176,25 @@ export default function App() {
               Tu mejor versión <br /> empieza hoy
             </h1>
             <p className="text-lg md:text-xl text-text-secondary mb-10 max-w-xl leading-relaxed">
-              Entrenamiento personalizado y nutrición consciente para una vida más activa, más sana y más tuya.
+              Entrenamiento, nutrición y acompañamiento especializado en trastornos de conducta alimentaria y desórdenes alimenticios. Hay salida, y no tienes que recorrer este camino sola.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button variant="primary" href="#contacto">Empieza tu transformación</Button>
+              <Button variant="primary" href="#contacto">Quiero empezar a sanar</Button>
               <Button variant="secondary" href="#servicios">Conoce mis programas</Button>
             </div>
 
             <div className="mt-12 flex flex-wrap justify-center md:justify-start gap-6">
               <div className="flex items-center gap-2 text-text-secondary font-semibold text-xs uppercase tracking-wider">
                 <span className="text-primary-dark text-lg">✓</span>
-                <span>+150 clientas satisfechas</span>
+                <span>Dietista especializada en TCA</span>
               </div>
               <div className="flex items-center gap-2 text-text-secondary font-semibold text-xs uppercase tracking-wider">
                 <span className="text-primary-dark text-lg">✓</span>
-                <span>Método 100% personalizado</span>
+                <span>Máster entrenamiento personal y biomecánica </span>
+              </div>
+              <div className="flex items-center gap-2 text-text-secondary font-semibold text-xs uppercase tracking-wider">
+                <span className="text-primary-dark text-lg">✓</span>
+                <span>Alimentación intuitiva y educación nutricional</span>
               </div>
               <div className="flex items-center gap-2 text-text-secondary font-semibold text-xs uppercase tracking-wider">
                 <span className="text-primary-dark text-lg">✓</span>
@@ -207,13 +211,17 @@ export default function App() {
           >
             <div className="w-72 h-72 md:w-[320px] md:h-[320px] rounded-full bg-gradient-to-b from-primary to-accent-cta p-2 shadow-lila border-8 border-white">
               <div className="w-full h-full rounded-full flex items-center justify-center overflow-hidden">
-                <div className="text-8xl font-display font-bold text-white opacity-80">SS</div>
+                <img
+                  src="/images/sam-cara.jpg"
+                  alt="Sam - Coach especializada en TCA"
+                  className="w-full h-full object-cover object-[center_10%]"
+                />
               </div>
             </div>
             <div className="absolute bottom-5 -right-5 md:-right-10 bg-white p-5 rounded-xl shadow-lila max-w-[220px] border-l-4 border-primary">
               <strong className="block text-sm mb-1">Hola, soy Sam</strong>
               <p className="text-xs leading-relaxed text-text-secondary">
-                Ayudo a mujeres a recuperar su energía y amor propio a través del movimiento consciente.
+                Te ayudo a sanar tu relación con la comida y tu cuerpo desde la fuerza, autoestima y el amor propio.
               </p>
             </div>
           </motion.div>
@@ -227,7 +235,11 @@ export default function App() {
             <div className="relative">
               <div className="w-full aspect-square rounded-full border-4 border-primary p-4">
                 <div className="w-full h-full rounded-full bg-support-warm flex items-center justify-center overflow-hidden">
-                  <div className="text-6xl font-display font-bold text-primary">SAM</div>
+                  <img
+                    src="/images/sam-cuerpo.jpg"
+                    alt="Sam - Dietista y entrenadora personal"
+                    className="w-full h-full object-cover object-[center_40%]"
+                  />
                 </div>
               </div>
             </div>
@@ -237,19 +249,22 @@ export default function App() {
             <h2 className="text-4xl font-bold mb-6">Hola, soy Sam</h2>
             <div className="space-y-4 text-lg text-text-secondary mb-8 leading-relaxed">
               <p>
-                Mi camino en el mundo del bienestar no empezó en un gimnasio, sino buscando respuestas para mi propia salud. Descubrí que el movimiento y la alimentación no son castigos, sino actos de amor propio.
+                Durante muchos años creía que yo nunca iba a poder sanarme, que era lo que me había tocado vivir. Sentía que mi TCA era mi realidad para siempre.
+                Hasta que junté el entrenamiento de fuerza, el trabajo psicológico y aprender a relacionarme de otra manera con la comida llegando a poder sanar.
               </p>
               <p>
-                Tras años de formación y experiencia, decidí crear <strong>Sanando con Sam</strong> para acompañar a personas como tú a romper con el ciclo de dietas restrictivas y entrenamientos aburridos.
+                Y fue precisamente eso lo que me impulsó a formarme: quería ayudar a otras personas a sanar con las mismas herramientas que me sanaron a mí.
+                Por eso creé el método <strong>EmPower</strong> - sanar desde la fuerza.
               </p>
             </div>
 
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {[
-                "Graduada en Ciencias del Deporte",
-                "Certificada en Nutrición Deportiva",
-                "+3 años acompañando transformaciones",
-                "Especialista en entrenamiento funcional"
+                "Dietista especializada en TCA y desórdenes alimenticios",
+                "Máster entrenamiento personal y biomecánica",
+                "Alimentación intuitiva y educación nutricional",
+                "Experiencia personal en el proceso de recuperación",
+                "Comunidad de acompañamiento en todos los programas"
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary-dark">
@@ -261,7 +276,7 @@ export default function App() {
             </ul>
 
             <blockquote className="border-l-4 border-primary pl-6 py-2 italic text-xl text-text-main bg-support-warm/50 rounded-r-lg">
-              "No se trata solo de entrenar. Se trata de construir una relación sana contigo misma."
+              "La verdadera fuerza empieza por dentro. Volver a habitarlo con respeto, confianza y amor propio, desde la paz con la que eliges cuidarte cada día."
             </blockquote>
           </div>
         </div>
@@ -271,8 +286,8 @@ export default function App() {
       <section id="servicios" className="py-20 bg-white">
         <div className="container mx-auto px-10">
           <SectionTitle
-            title="Programas a tu medida"
-            subtitle="Elige el camino que mejor se adapte a tus objetivos actuales. Todos mis planes son 100% personalizados."
+            title="Programas pensados para ti"
+            subtitle="Cada programa está diseñado desde el respeto, la escucha y el conocimiento especializado en TCA."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -282,14 +297,14 @@ export default function App() {
               className="bg-white p-8 rounded-2xl shadow-md border-t-4 border-primary flex flex-col"
             >
               <div className="mb-6">
-                <h3 className="text-xl font-bold mb-2">Personal Online</h3>
+                <h3 className="text-xl font-bold mb-2">Educación nutricional</h3>
                 <p className="text-sm text-text-secondary leading-relaxed">
-                  Sesiones adaptadas a tu cuerpo, objetivos y disponibilidad semanal.
+                  Sesiones individuales para trabajar tu relación con la comida desde la base, sin dietas restrictivas ni reglas absurdas.
                 </p>
               </div>
               <ul className="space-y-2 mb-8 text-xs text-text-secondary list-none">
-                <li>• Seguimiento WhatsApp</li>
-                <li>• Plan flexible</li>
+                <li>• Sesiones individuales</li>
+                <li>• Comunidad de apoyo incluida</li>
               </ul>
               <div className="mt-auto">
                 <a href="https://form.typeform.com/to/PGgHEwa7" target="_blank" rel="noopener noreferrer">
@@ -304,15 +319,17 @@ export default function App() {
               className="bg-support-warm p-8 rounded-2xl shadow-lila border-t-6 border-accent-cta flex flex-col relative transform -translate-y-2"
             >
               <div className="mb-6">
-                <div className="bg-primary text-text-main text-[10px] font-bold px-2 py-1 rounded inline-block mb-2">MÁS POPULAR</div>
-                <h3 className="text-xl font-bold mb-2">Salud Activa Total</h3>
+                <div className="bg-primary text-text-main text-[10px] font-bold px-2 py-1 rounded inline-block mb-2">MÁS COMPLETO</div>
+                <h3 className="text-xl font-bold mb-2">Sana desde tu fuerza</h3>
                 <p className="text-sm text-text-secondary leading-relaxed">
-                  Combinación perfecta de entreno + nutrición + mentalidad positiva.
+                  Un acompañamiento integral que une nutrición, entrenamiento y mentalidad. Todo personalizado, todo a tu ritmo.
                 </p>
               </div>
               <ul className="space-y-2 mb-8 text-xs text-text-secondary list-none">
-                <li>• Todo lo anterior</li>
-                <li>• Comunidad privada</li>
+                <li>• Plan nutricional personalizado</li>
+                <li>• Entrenamiento personalizado</li>
+                <li>• Sesiones individuales</li>
+                <li>• Comunidad de apoyo incluida</li>
               </ul>
               <div className="mt-auto">
                 <a href="https://form.typeform.com/to/PGgHEwa7" target="_blank" rel="noopener noreferrer">
@@ -327,14 +344,14 @@ export default function App() {
               className="bg-white p-8 rounded-2xl shadow-md border-t-4 border-primary flex flex-col"
             >
               <div className="mb-6">
-                <h3 className="text-xl font-bold mb-2">Plan Nutricional</h3>
+                <h3 className="text-xl font-bold mb-2">Nútrete con cariño</h3>
                 <p className="text-sm text-text-secondary leading-relaxed">
-                  Aprende a comer bien sin restricciones absurdas ni efecto rebote.
+                  Aprende a nutrir tu cuerpo de forma real, flexible y sostenible. Sin culpa, sin etiquetas.
                 </p>
               </div>
               <ul className="space-y-2 mb-8 text-xs text-text-secondary list-none">
-                <li>• Recetas saludables</li>
-                <li>• Análisis de hábitos</li>
+                <li>• Plan nutricional personalizado</li>
+                <li>• Comunidad de apoyo incluida</li>
               </ul>
               <div className="mt-auto">
                 <a href="https://form.typeform.com/to/PGgHEwa7" target="_blank" rel="noopener noreferrer">
@@ -349,17 +366,17 @@ export default function App() {
       {/* [5] CÓMO FUNCIONA */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <SectionTitle title="Tu camino hacia el cambio" subtitle="Un proceso sencillo y acompañado para que nunca te sientas sola." />
+          <SectionTitle title="Tu camino hacia la tranquilidad" subtitle="Un proceso acompañado, a tu ritmo, sin presiones." />
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
             {/* Connector Line (Desktop) */}
             <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-primary/20 -z-10"></div>
 
             {[
-              { step: "01", title: "Consulta gratuita", desc: "Hablamos de tus objetivos, miedos y situación actual sin compromiso." },
-              { step: "02", title: "Diseño de tu plan", desc: "Creo un programa 100% adaptado a tu ritmo de vida y preferencias." },
-              { step: "03", title: "Empezamos juntas", desc: "Entrenamiento, nutrición y seguimiento constante para que no decaigas." },
-              { step: "04", title: "Transformación real", desc: "Cambios visibles, más energía y hábitos que te acompañarán siempre." }
+              { step: "01", title: "Consulta gratuita", desc: "Hablamos de dónde estás, cómo te sientes y qué necesitas. Sin compromiso y con total confidencialidad." },
+              { step: "02", title: "Diseñamos de tu programa", desc: "Creo un plan completamente adaptado a ti, tu historia y tu momento actual." },
+              { step: "03", title: "Empezamos juntas", desc: "Sesiones individuales, seguimiento cercano y una comunidad que te acompaña." },
+              { step: "04", title: "Sanación real", desc: "Pequeños cambios que se convierten en una nueva forma de relacionarte contigo misma." }
             ].map((item, i) => (
               <div key={i} className="text-center group">
                 <div className="w-24 h-24 rounded-full bg-support-warm border-2 border-primary flex items-center justify-center text-3xl font-bold text-primary-dark mx-auto mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300">
@@ -413,16 +430,18 @@ export default function App() {
             <div className="absolute bottom-0 right-0 w-48 h-48 bg-white/10 rounded-full translate-x-1/4 translate-y-1/4"></div>
 
             <div className="relative z-10">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">¿Lista para empezar?</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">¿Sientes que es tu momento?</h2>
               <p className="text-xl md:text-2xl mb-10 max-w-2xl mx-auto opacity-90">
-                Primera consulta totalmente gratis y sin compromiso. Cuéntame tu historia y diseñemos tu plan.
+                La primera consulta es gratuita y sin compromiso. Cuéntame tu historia y vemos juntas por dónde empezar.
               </p>
               <Button variant="white" className="text-primary-dark font-bold text-lg" href="#contacto">
                 Reservar mi consulta gratis
               </Button>
+              {/*
               <p className="mt-6 text-sm font-semibold flex items-center justify-center gap-2">
                 <Sparkles size={16} /> Solo quedan 4 plazas disponibles este mes
               </p>
+              */}
             </div>
           </div>
         </div>
@@ -470,20 +489,20 @@ export default function App() {
             <div className="md:w-1/3 bg-primary p-12 text-white flex flex-col justify-center">
               <h3 className="text-3xl font-bold mb-6 text-white">Hablemos</h3>
               <p className="mb-8 opacity-90">
-                Rellena el formulario y me pondré en contacto contigo en menos de 24 horas para agendar tu consulta gratuita.
+                Rellena el formulario y me pondré en contacto contigo en menos de 24 horas para agendar tu consulta gratuita. Estoy aquí.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
                     <MessageCircle size={20} />
                   </div>
-                  <span>+34 600 000 000</span>
+                  <span>+34 633 875 138</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
                     <Send size={20} />
                   </div>
-                  <span>hola@sanandoconsam.com</span>
+                  <span>info.teamsam@gmail.com</span>
                 </div>
               </div>
             </div>
