@@ -212,7 +212,7 @@ export default function App() {
             <div className="w-72 h-72 md:w-[320px] md:h-[320px] rounded-full bg-gradient-to-b from-primary to-accent-cta p-2 shadow-lila border-8 border-white">
               <div className="w-full h-full rounded-full flex items-center justify-center overflow-hidden">
                 <img
-                  src="/images/sam-cara.jpg"
+                  src="/images/sam-cara.jpeg"
                   alt="Sam - Coach especializada en TCA"
                   className="w-full h-full object-cover object-[center_10%]"
                 />
@@ -236,7 +236,7 @@ export default function App() {
               <div className="w-full aspect-square rounded-full border-4 border-primary p-4">
                 <div className="w-full h-full rounded-full bg-support-warm flex items-center justify-center overflow-hidden">
                   <img
-                    src="/images/sam-cuerpo.jpg"
+                    src="/images/sam-cuerpo.jpeg"
                     alt="Sam - Dietista y entrenadora personal"
                     className="w-full h-full object-cover object-[center_40%]"
                   />
