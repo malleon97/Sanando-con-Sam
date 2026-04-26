@@ -218,7 +218,7 @@ export default function App() {
                 />
               </div>
             </div>
-            <div className="absolute bottom-10 -right-5 md:-right-10 bg-white p-5 rounded-xl shadow-lila max-w-[220px] border-l-4 border-primary">
+            <div className="absolute bottom-13 -right-5 md:-right-10 bg-white p-5 rounded-xl shadow-lila max-w-[220px] border-l-4 border-primary">
               <strong className="block text-sm mb-1">Hola, soy Sam</strong>
               <p className="text-xs leading-relaxed text-text-secondary">
                 Te ayudo a sanar tu relación con la comida y tu cuerpo desde la fuerza, autoestima y el amor propio.
