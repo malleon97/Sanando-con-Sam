@@ -173,7 +173,7 @@ export default function App() {
             className="text-center md:text-left"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Tu mejor versión <br /> empieza hoy
+              Sanar tu relación con <strong>la comida</strong> <br /> y con tu <strong>cuerpo</strong> es posible.
             </h1>
             <p className="text-lg md:text-xl text-text-secondary mb-10 max-w-xl leading-relaxed">
               Entrenamiento, nutrición y acompañamiento especializado en trastornos de conducta alimentaria y desórdenes alimenticios. Hay salida, y no tienes que recorrer este camino sola.
@@ -218,7 +218,7 @@ export default function App() {
                 />
               </div>
             </div>
-            <div className="absolute bottom-4 -right-3 md:-right-10 bg-white p-5 rounded-xl shadow-lila max-w-[220px] border-l-4 border-primary">
+            <div className="absolute bottom-2 -right-3 md:-right-10 bg-white p-5 rounded-xl shadow-lila max-w-[220px] border-l-4 border-primary">
               <strong className="block text-sm mb-1">Hola, soy Sam</strong>
               <p className="text-xs leading-relaxed text-text-secondary">
                 Te ayudo a sanar tu relación con la comida y tu cuerpo desde la fuerza, autoestima y el amor propio.
