@@ -212,13 +212,13 @@ export default function App() {
             <div className="w-72 h-72 md:w-[320px] md:h-[320px] rounded-full bg-gradient-to-b from-primary to-accent-cta p-2 shadow-lila border-8 border-white">
               <div className="w-full h-full rounded-full flex items-center justify-center overflow-hidden">
                 <img
-                  src="/images/sam-cara.jpeg"
+                  src="/images/sam-cara.png"
                   alt="Sam - Coach especializada en TCA"
                   className="w-full h-full object-cover object-[center_10%]"
                 />
               </div>
             </div>
-            <div className="absolute bottom-10 -right-5 md:-right-10 bg-white p-5 rounded-xl shadow-lila max-w-[220px] border-l-4 border-primary">
+            <div className="absolute bottom-16 -right-5 md:-right-10 bg-white p-5 rounded-xl shadow-lila max-w-[220px] border-l-4 border-primary">
               <strong className="block text-sm mb-1">Hola, soy Sam</strong>
               <p className="text-xs leading-relaxed text-text-secondary">
                 Te ayudo a sanar tu relación con la comida y tu cuerpo desde la fuerza, autoestima y el amor propio.
@@ -236,7 +236,7 @@ export default function App() {
               <div className="w-full aspect-square rounded-full border-4 border-primary p-4">
                 <div className="w-full h-full rounded-full bg-support-warm flex items-center justify-center overflow-hidden">
                   <img
-                    src="/images/sam-cuerpo.jpeg"
+                    src="/images/sam-cuerpo.png"
                     alt="Sam - Dietista y entrenadora personal"
                     className="w-full h-full object-cover object-[center_40%]"
                   />
