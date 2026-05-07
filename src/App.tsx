@@ -395,32 +395,74 @@ export default function App() {
         <div className="container mx-auto px-4">
           <SectionTitle title="Historias que inspiran" subtitle="Ellas ya han dado el paso. Mira lo que han conseguido con el método de Sam." />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { name: "Lucía García", result: "Bajé 8 kg en 3 meses", text: "Sam me enseñó que no hace falta sufrir para ver resultados. He recuperado mi energía y por fin me gusta lo que veo en el espejo.", color: "bg-primary" },
-              { name: "Elena Martínez", result: "Aprendí a comer sin culpa", text: "Antes vivía a dieta. Ahora disfruto de la comida y me siento más fuerte que nunca. El seguimiento de Sam es increíble.", color: "bg-accent-cta" },
-              { name: "Marta Ruiz", result: "Hábito de deporte real", text: "Nunca pensé que el deporte me gustaría tanto. Sam adapta todo a mi horario de oficina y familia. ¡Es la mejor inversión!", color: "bg-primary-dark" }
-            ].map((t, i) => (
-              <div key={i} className="bg-white p-8 rounded-3xl shadow-md">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => <Star key={i} size={18} className="fill-primary text-primary" />)}
+          {(() => {
+            const testimonios = [
+              { name: "Emma Fernandez", result: "22 años", text: "Con Sam todo resulta más sencillo. Su motivación y ayuda hace que el proceso no sea una mejora solo física, sino también mental.", color: "bg-primary" },
+              { name: "Celtia López", result: "28 años", text: "Con Sam aprendí que no tengo que culparme por lo que como. Me enseñó a cuidarme, a valorarme y a entender que la salud va mucho más allá del físico. Gracias a ella, hoy me quiero más por dentro y por fuera.", color: "bg-accent-cta" },
+              { name: "Irene Beceiro", result: "26 años", text: "Gracias a Sam cambié por completo mi forma de ver el deporte: de ser solo una forma de adelgazar a descubrir el powerlifting, que ahora es parte de mi vida. Además, ahora como súper tranquila, disfruto de la comida sin ningún sentimiento de culpa.", color: "bg-primary-dark" },
+              { name: "Maria Rodriguez", result: "42 años", text: "Mi experiencia contigo fue increíble. Eres una persona súper trabajadora, que te implicas mucho en tu trabajo y eso se nota al conseguir resultados. Siempre buscas lo mejor para la otra persona y piensas mucho en ella.", color: "bg-primary" },
+              { name: "Ariadna Beltrán", result: "30 años", text: "Siempre me sentí muy cómoda en el proceso porque tú haces que sea así, ya que das mucha confianza, se puede hablar abiertamente contigo y siempre estás muy pendiente. Adaptas los ejercicios a las posibilidades de cada uno sin necesidad de comprar utensilios o ir al gimnasio.", color: "bg-accent-cta" },
+              { name: "Lucia Mei", result: "21 años", text: "Antes pensaba que había comida 'buena' y 'mala', y vivía con culpa cada vez que salía un poco de la dieta. Sam me enseñó que la alimentación va de equilibrio, no de prohibiciones. He aprendido a disfrutar de la comida sin miedo, sin obsesionarme y cuidándome de verdad.", color: "bg-primary-dark" }
+            ]
+
+            const [current, setCurrent] = React.useState(0)
+
+            React.useEffect(() => {
+              const timer = setInterval(() => {
+                setCurrent(prev => (prev + 2) % testimonios.length)
+              }, 4000)
+              return () => clearInterval(timer)
+            }, [])
+
+            const visible = [
+              testimonios[current % testimonios.length],
+              testimonios[(current + 1) % testimonios.length],
+              testimonios[(current + 2) % testimonios.length]
+            ]
+
+            return (
+              <>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {visible.map((t, i) => (
+                    <motion.div
+                      key={current + i}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: i * 0.1 }}
+                      className="bg-white p-8 rounded-3xl shadow-md"
+                    >
+                      <div className="flex gap-1 mb-4">
+                        {[...Array(5)].map((_, j) => <Star key={j} size={18} className="fill-primary text-primary" />)}
+                      </div>
+                      <p className="text-lg italic text-text-main mb-6">"{t.text}"</p>
+                      <div className="flex items-center gap-4">
+                        <div className={`w-12 h-12 rounded-full ${t.color} flex items-center justify-center text-white font-bold`}>
+                          {t.name.split(' ').map(n => n[0]).join('')}
+                        </div>
+                        <div>
+                          <h5 className="font-bold text-text-main">{t.name}</h5>
+                          <p className="text-sm text-primary-dark font-semibold">{t.result}</p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
                 </div>
-                <p className="text-lg italic text-text-main mb-6">"{t.text}"</p>
-                <div className="flex items-center gap-4">
-                  <div className={`w-12 h-12 rounded-full ${t.color} flex items-center justify-center text-white font-bold`}>
-                    {t.name.split(' ').map(n => n[0]).join('')}
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-text-main">{t.name}</h5>
-                    <p className="text-sm text-primary-dark font-semibold">{t.result}</p>
-                  </div>
+
+                {/* Dots indicadores */}
+                <div className="flex justify-center gap-2 mt-8">
+                  {testimonios.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setCurrent(i)}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${current === i ? 'bg-primary w-6' : 'bg-primary/30'}`}
+                    />
+                  ))}
                 </div>
-              </div>
-            ))}
-          </div>
+              </>
+            )
+          })()}
         </div>
       </section>
-
       {/* [7] OFERTA / BANNER CTA */}
       <section className="py-20">
         <div className="container mx-auto px-4">
