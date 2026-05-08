@@ -616,9 +616,13 @@ export default function App() {
                     <label className="block text-sm font-bold text-text-main mb-2">Mensaje libre</label>
                     <textarea name='message' rows={4} className="w-full px-4 py-3 rounded-xl border border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="Cuéntame un poco más sobre ti..."></textarea>
                   </div>
-                  <Button variant="primary" className="w-full flex items-center justify-center gap-2">
-                    Enviar mi mensaje a Sam <ArrowRight size={20} />
-                  </Button>
+                  <button
+                    type="submit"
+                    className="w-full flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-bold transition-all duration-300 bg-accent-cta text-white hover:bg-primary-dark shadow-lila"
+                  >
+                    Enviar mi mensaje a Sam
+                    <ArrowRight size={20} />
+                  </button>
                 </form>
               )}
             </div>
