@@ -8,6 +8,7 @@ import {
   ArrowRight, Users, Sparkles
 } from 'lucide-react';
 
+
 // --- Componentes de Apoyo ---
 
 emailjs.init("ab1G48j31Zy2JdQdF");
@@ -654,8 +655,10 @@ export default function App() {
             <a href="#contacto" className="hover:text-primary">Contacto</a>
           </div>
 
-          <div className="pt-8 border-t border-white/10 text-sm opacity-60">
-            © 2025 Sanando con Sam · Política de Privacidad · Aviso Legal
+          <div className="pt-8 border-t border-white/10 text-sm opacity-60 flex flex-wrap justify-center gap-4">
+            © 2025 Sanando con Sam ·
+            <a href="/privacidad" className="hover:text-primary underline">Política de Privacidad</a> ·
+            <a href="/terminos" className="hover:text-primary underline">Aviso Legal</a>
           </div>
         </div>
       </footer>
