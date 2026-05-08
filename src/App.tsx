@@ -91,7 +91,7 @@ export default function App() {
     setFormStatus('loading');
 
     try {
-      const result = await emailjs.sendForm('service_brogf5z', 'template_6qle42j', e.target as HTMLFormElement);
+      const result = await emailjs.sendForm('service_brogf5z', 'template_sam', e.target as HTMLFormElement);
       console.log('Éxito:', result);
       setFormStatus('success');
     } catch (error) {
