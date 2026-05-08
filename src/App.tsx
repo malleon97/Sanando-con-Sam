@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import emailjs from '@emailjs/browser';
 import WhatsAppButton from '@/Whatsapp';
 import {
   Menu, X, Check, Star, Apple, Dumbbell, Heart,
@@ -8,6 +9,8 @@ import {
 } from 'lucide-react';
 
 // --- Componentes de Apoyo ---
+
+emailjs.init("ab1G48j31Zy2JdQdF");
 
 const SectionTitle = ({ title, subtitle, light = false }: { title: string, subtitle?: string, light?: boolean }) => (
   <div className="text-center mb-12 px-4">
@@ -83,9 +86,19 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setFormStatus('success');
+    setFormStatus('loading');
+
+    try {
+      const result = await emailjs.sendForm('service_brogf5z', 'template_6qle42j', e.target as HTMLFormElement);
+      console.log('Éxito:', result);
+      setFormStatus('success');
+    } catch (error) {
+      console.error('Error EmailJS:', error);
+      setFormStatus('error');
+      alert('Error al enviar: ' + JSON.stringify(error));
+    }
   };
 
   const faqs = [
@@ -410,7 +423,7 @@ export default function App() {
             React.useEffect(() => {
               const timer = setInterval(() => {
                 setCurrent(prev => (prev + 2) % testimonios.length)
-              }, 4000)
+              }, 10000)
               return () => clearInterval(timer)
             }, [])
 
@@ -572,21 +585,21 @@ export default function App() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-bold text-text-main mb-2">Nombre completo</label>
-                      <input required type="text" className="w-full px-4 py-3 rounded-xl border border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="Tu nombre" />
+                      <input name="name" required type="text" className="w-full px-4 py-3 rounded-xl border border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="Tu nombre" />
                     </div>
                     <div>
                       <label className="block text-sm font-bold text-text-main mb-2">Email</label>
-                      <input required type="email" className="w-full px-4 py-3 rounded-xl border border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="tu@email.com" />
+                      <input name="email" required type="email" className="w-full px-4 py-3 rounded-xl border border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="tu@email.com" />
                     </div>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-bold text-text-main mb-2">Teléfono</label>
-                      <input required type="tel" className="w-full px-4 py-3 rounded-xl border border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="600 000 000" />
+                      <input name="phone" required type="tel" className="w-full px-4 py-3 rounded-xl border border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="600 000 000" />
                     </div>
                     <div>
                       <label className="block text-sm font-bold text-text-main mb-2">¿Cuál es tu objetivo?</label>
-                      <select
+                      <select name="objective" required
                         value={selectedObjective}
                         onChange={(e) => setSelectedObjective(e.target.value)}
                         className="w-full px-4 py-3 rounded-xl border border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white"
@@ -601,7 +614,7 @@ export default function App() {
                   </div>
                   <div>
                     <label className="block text-sm font-bold text-text-main mb-2">Mensaje libre</label>
-                    <textarea rows={4} className="w-full px-4 py-3 rounded-xl border border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="Cuéntame un poco más sobre ti..."></textarea>
+                    <textarea name='message' rows={4} className="w-full px-4 py-3 rounded-xl border border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="Cuéntame un poco más sobre ti..."></textarea>
                   </div>
                   <Button variant="primary" className="w-full flex items-center justify-center gap-2">
                     Enviar mi mensaje a Sam <ArrowRight size={20} />
@@ -644,7 +657,7 @@ export default function App() {
       </footer>
 
       {/* [11] BOTÓN FLOTANTE WHATSAPP */}
-      <WhatsAppButton phone="34612345678" message="Hola, me interesa tu asesoramiento deportivo"
+      <WhatsAppButton phone="34633875138" message="Hola, me interesa tu asesoramiento deportivo"
       />
     </div>
   );
